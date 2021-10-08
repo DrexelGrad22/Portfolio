@@ -145,6 +145,7 @@ a{
 
     .headshot-me img{
         max-height: 90%
+        max-width: 90%;
     }
 
     body{
