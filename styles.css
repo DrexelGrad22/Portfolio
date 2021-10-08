@@ -1,0 +1,170 @@
+html{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 50px 150px 400px 400px 100px;
+    margin: 0;
+}
+
+header{
+    grid-area: 1/1/span 1/span 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: black;
+    color: white;
+    }
+
+nav{
+    grid-area: 2/1/span 1/ span 2;
+    background-color: hsla(0,0%,0%,0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.about{
+    grid-area: 3/1/span 1/span 2;
+    display: flex;
+}
+
+.headshot-me{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+.headshot-me img{
+    max-width: 90%;
+    border-radius: 25%;
+}
+
+.about-me{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 120px;
+    flex-direction: column;
+    text-align: center;
+}
+
+.my-projects{
+    grid-area: 4/1/span 1/span 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: hsla(0,0%,0%,0.3);
+}
+
+.projects{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.project{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.project img{
+    max-width: 90%;
+}
+
+.contact{
+    grid-area: 5/1/span 1/span 2;
+    background-color: black;
+    color: white;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+h1{
+    margin: 0;
+    font-size: 40px;
+}
+
+h2{
+    font-size: 30px;
+}
+
+h3{
+    font-size: 20px;
+}
+
+p{
+    margin: 0;
+    font-size: 20px;
+}
+
+a{
+    margin: 0;
+    text-decoration: none;
+    color: white;
+}
+
+@media only screen and (max-width: 500px) {
+    .links{
+        display: none;
+    }
+
+    header{
+        justify-content: center;
+    }
+
+    .about{
+        flex-direction: column;
+    }
+
+    .about-me{
+        height: 50%;
+        width: 100%;
+        margin: 0;
+    }
+
+    .about-me h2{
+        margin:0;
+    }
+
+    .headshot-me{
+        height: 50%;
+        width: 100%
+    }
+
+    .headshot-me img{
+        max-height: 90%
+    }
+
+    body{
+        grid-template-rows: 50px 150px 400px 800px 100px;
+    }
+
+    .my-projects h2{
+        margin: 0;
+    }
+
+    .projects{
+        flex-direction: column;
+        max-height: 80%;
+    }
+
+    .project{
+        max-height: 20%;
+    }
+
+    .project img{
+        max-height: 100%;
+    }
+}
